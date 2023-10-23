@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery.js"></script>
+<script>
+            $(document).ready(function() {
+            $(".lista1").mouseover(function() {
+                $(".zawodnicy").show(300);
+            });
+
+            $(".lista1").mouseleave(function() {
+                $(".zawodnicy").hide(300);
+            });
+            $(".lista2").mouseover(function() {
+                $(".zespoly").show(300);
+            });
+
+            $(".lista2").mouseleave(function() {
+                $(".zespoly").hide(300);
+            });
+
+        });
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Tilt+Neon&display=swap');
+    </style>
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="nav">
+        <ul>
+            
+        <li><a href="#"><h1>PiłkaNożna24</h1></a>
+            <li class="lista1"><a href="#">Zawodnicy</a>
+                <ul class="zawodnicy">
+                    <li><a href="#">Cristiano Ronaldo</a></li>
+                    <li><a href="#">Robert Lewandowski</a></li>
+                    <li><a href="#">Lionel Pessi</a></li>
+                </ul>
+            </li>
+            
+             <li class="lista2"><a href="#">Zespoły</a>
+                    <ul class="zespoly">
+                        <li><a href="#">Real Madryt</a></li>
+                        <li><a href="#">Rks Radomsko</a></li>
+                        <li><a href="#">FC Varcelona</a></li>
+                    </ul>
+                </li>
+
+ 
+
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

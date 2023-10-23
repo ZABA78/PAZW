@@ -1,0 +1,104 @@
+*
+{
+    font-family: 'Tilt Neon', sans-serif;
+  
+    
+}
+
+h1
+{
+    padding: 10px;
+    font-size: 40px;
+    f;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+header
+{
+    background-color: rgb(8, 102, 8);
+    height: 150px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+a
+{
+padding: 90px;
+text-align: center;
+float: left;
+margin-left: 130px;
+text-decoration: none;
+color: black;
+font-size: 30px;
+}
+nav {
+	margin: 0 auto;
+	max-width: 800px;
+	background: #008FEA;
+	box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+nav::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	color: rgba(255, 255, 255, .9);
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background: rgba(0, 0, 0, .15);
+}
+
+nav ul li a:focus {
+	color: white;
+}
+
+nav ul li a:not(:only-child)::after {
+	padding-left: 4px;
+	content: ' ▾';
+}
+
+nav ul li ul li {
+	min-width: 190px;
+}
+
+nav ul li ul li a {
+	background: transparent;
+	color: #555;
+	border-bottom: 1px solid #DDE0E7;
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus {
+	background: #eee;
+	color: #111;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+}

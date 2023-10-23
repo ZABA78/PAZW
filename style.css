@@ -1,0 +1,66 @@
+*
+{
+    font-family: 'Roboto', sans-serif;
+font-family: 'Tilt Neon', sans-serif;
+}
+nav {
+	margin: 0 auto;
+	max-width: 800px;
+	background: rgb(7, 154, 7);
+	box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+nav::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+    
+}
+
+nav ul li a {
+	display: block;
+	width: auto;
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+    
+}
+a
+{
+    color:black
+}
+
+
+
+
+
+
+
+
+
+.zawodnicy {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+}
+.zespoly {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    
+}
