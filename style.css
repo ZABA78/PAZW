@@ -7,7 +7,7 @@ nav {
 	margin: 0 auto;
 	max-width: 800px;
 	background: rgb(7, 154, 7);
-	box-shadow:0 3px 15px rgba(0,0,0,.15);
+	
 }
 
 nav::after {
@@ -30,7 +30,7 @@ nav ul li {
 
 nav ul li a {
 	display: block;
-	width: auto;
+	
 	text-decoration: none;
 	padding: 1rem 2rem;
 	border-top: 2px solid transparent;
@@ -41,6 +41,14 @@ nav ul li a {
 a
 {
     color:black
+}
+header
+{
+    background-color: rgb(7, 154, 7); ;
+}
+nav
+{
+    width: 100%;
 }
 
 
@@ -58,6 +66,20 @@ a
 	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
 }
 .zespoly {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    
+}
+.mecze {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    
+}
+.trofea {
 	display: none;
 	position: absolute;
 	background: #fff;
