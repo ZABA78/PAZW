@@ -1,0 +1,33 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+const App = React.createElement(
+  'div',
+  {
+    className:'wrapper',
+    items:'2',
+  },
+  [
+    React.createElement(
+    'h1',
+    {
+    className:'mainHeader',
+    },
+    'Hello World',
+    ),
+    React.createElement(
+      'h2',
+      {
+      className: 'secondaryHeader',
+      },
+      'Hello ZSE-E',
+      )
+  ]
+);
+
+ReactDOM.render(
+  App,
+  document.getElementById('root')
+);
