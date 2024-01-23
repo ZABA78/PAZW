@@ -1,0 +1,38 @@
+#baner
+{
+    text-align: left;
+    
+}
+#nav
+{
+    background-color: #704a21;
+    border-radius: 5px;
+    width: 20%;
+}
+#buto
+{
+    width: 20%;
+    padding: 10px;
+    margin-left: 40%;
+    margin-top: 10px;
+    
+}
+
+#card2
+{
+    background-color: rgb(167, 161, 161);
+    width: 30%;
+    padding: 10px;
+    margin-left: 35%;
+    border-radius: 15px;
+
+}
+#pag
+{
+    
+    width: 30%;
+    padding: 10px;
+    margin-left: 45%;
+    border-radius: 15px;
+
+}
