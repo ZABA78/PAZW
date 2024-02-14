@@ -9,46 +9,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<script>
-    function showInput(range){
-        rangeValue = range.value;
-        document.querySelector(".showRange").innerHTML = rangeValue;
-        
-    }
-</script>
+    <script>
+        function pokaz(range){
+            rangeValue = range.value;
+            document.querySelector(".showRange").innerHTML = rangeValue;
+        }
+
+        function wypisz() {
+            event.preventDefault();
+            
+            let imie = document.querySelector('.imie').value;
+            let nazwisko = document.querySelector('#nazwisko').value;
+            let plec = document.querySelector('input[name="plec"]:checked').value;
+            let wiek = document.querySelector('#age').value;
+            let staz = document.querySelector('#staz').value;
+            let email = document.querySelector('#email').value;
+            
+            document.getElementById("formData").innerHTML = "Imię: " + imie + "<br>Nazwisko: " + nazwisko + "<br>E-mail: "+ email+  "<br>Płeć: " + plec + "<br>Wiek: " + wiek + "<br>Staż: " + staz  ;
+        }
+    </script>
 </head>
 <body>
-    
-<form>
+
+<form onsubmit="wypisz()">
   <div class="form-group">
-    <label for="">Imie</label>
-    <input type="text" class="imie"  placeholder="Wpisz imie">
-   
+    <label for="imie">Imię:</label><br>
+    <input type="text" class="imie" id="imie" placeholder="Imię">
   </div>
   <div class="form-group mb-3">
-    <label for="Nazwisko">Nazwisko</label>
-    <input type="text" placeholder="Nazwisko">
+    <label for="nazwisko">Nazwisko:</label><br>
+    <input type="text" id="nazwisko" placeholder="Nazwisko">
+  </div>
+  <div class="form-group mb-3">
+    <label for="nazwisko">E-mail:</label><br>
+    <input type="email" id="email" placeholder="abc@gmail.com">
   </div>
   <div class="form-check mb-3">
-    <input type="checkbox" class="form-check-input">
-    <label class="form-check-label" for="exampleCheck1">Kobieta</label><br>
-    <input type="checkbox" class="form-check-input">
-    <label class="form-check-label" for="exampleCheck1">Man</label>
+    <input type="radio" class="form-check-input" name="plec" id="kobieta" value="Kobieta">
+    <label class="form-check-label" for="kobieta">Kobieta</label><br>
+    <input type="radio" class="form-check-input" name="plec" id="mezczyzna" value="Mężczyzna">
+    <label class="form-check-label" for="mezczyzna">Mężczyzna</label>
   </div>
-<div class= "range mb-3 ">
+  <div class= "range mb-3 ">
     <label for="age" class="form-label">Wiek:</label>
-    <input type="range" class="form-range" oninput="showInput(this);" id="age" name="age" min="13" max="60">
-                            <b class="showRange"> </b>
-</div>
-<div class= "input-number mb-3 ">
+    <input type="range" class="form-range" oninput="pokaz(this);" id="age" name="age" min="13" max="60">
+    <b class="showRange"> </b>
+  </div>
+  <div class= "input-number mb-3 ">
     <label for="staz" class="form-label">Staż:</label>
-    <input type="number" id="tentacles" name="tentacles" min="10" max="100" />
-</div>
+    <input type="number" id="staz" name="staz" min="10" max="100" />
+  </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<div id="formData"></div>
+
 </body>
 </html>
