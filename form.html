@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container mt-5">
+  <form onsubmit="wypisz()" class="border p-4 rounded-3 bg-light">
+    <div class="mb-3">
+      <label for="imie" class="form-label">Imię:</label>
+      <input type="text" class="form-control" id="imie" placeholder="Imię">
+    </div>
+    <div class="mb-3">
+      <label for="nazwisko" class="form-label">Nazwisko:</label>
+      <input type="text" class="form-control" id="nazwisko" placeholder="Nazwisko">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail:</label>
+      <input type="email" class="form-control" id="email" placeholder="abc@gmail.com">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Płeć:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="plec" id="kobieta" value="Kobieta">
+        <label class="form-check-label" for="kobieta">Kobieta</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="plec" id="mezczyzna" value="Mężczyzna">
+        <label class="form-check-label" for="mezczyzna">Mężczyzna</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Wiek:</label>
+      <input type="range" class="form-range" oninput="pokaz(this);" id="age" name="age" min="13" max="60">
+      <b class="d-block mt-2"> <span class="showRange"> </span></b>
+    </div>
+    <div class="mb-3">
+      <label for="staz" class="form-label">Staż:</label>
+      <input type="number" class="form-control" id="staz" name="staz" min="10" max="100">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div id="formData" class="mt-4"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
+<script>
+  function pokaz(range) {
+    rangeValue = range.value;
+    document.querySelector(".showRange").innerHTML = rangeValue;
+  }
+
+  function wypisz() {
+    event.preventDefault();
+
+    let imie = document.querySelector('#imie').value;
+    let nazwisko = document.querySelector('#nazwisko').value;
+    let plec = document.querySelector('input[name="plec"]:checked').value;
+    let wiek = document.querySelector('#age').value;
+    let staz = document.querySelector('#staz').value;
+    let email = document.querySelector('#email').value;
+
+    document.getElementById("formData").innerHTML = "Imię: " + imie + "<br>Nazwisko: " + nazwisko + "<br>E-mail: " + email + "<br>Płeć: " + plec + "<br>Wiek: " + wiek + "<br>Staż: " + staz;
+  }
+</script>
+
+</body>
+</html>
